@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   /* You can add more generic styles here */
 
-  h1 {
+  /* h1 {
     @apply text-xl sm:text-2xl  md:text-3xl lg:text-4xl font-bold ;
   }
   h2 {
@@ -25,5 +26,5 @@
   }
   p {
     @apply text-base leading-7;
-  }
+  } */
 }
