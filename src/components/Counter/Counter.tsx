@@ -13,12 +13,14 @@ export default class Counter extends Component<CounterProps,CounterState> {
         };
     }
 
-    increaseValue = () => {
-        this.setState({count:this.state.count+1});
+    decreaseValue = () => {
+        if (this.state.count <= 10) {
+            this.setState({ count: this.state.count - 1 })
+        };
     };
 
-    decreaseValue = () => {
-        this.setState({ count: this.state.count - 1 })
+    increaseValue = () => {
+        this.setState({count:this.state.count+1});
     };
 
   render() {
@@ -38,6 +40,6 @@ export default class Counter extends Component<CounterProps,CounterState> {
             </div>
         </div>
     )
-      //01:01:09
+      //01:26:09
   }
 }
