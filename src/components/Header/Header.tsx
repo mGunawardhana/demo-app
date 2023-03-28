@@ -1,18 +1,23 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
+import userImage from "../../assets/b.png"
+
 
 export default class Header extends Component {
   render() {
     return (
-      <section className="bg-blue-400 w-full fixed h-16 p-2.5">
+      <section className=" w-full fixed h-16 p-2.5 shadow-2xl">
         <div className="h-full flex">
           <section className="h-full w-1/2 flex items-center">
-            <h1 className="pl-6 text-xl">Sample Logo</h1>
+            <img className="pl-6 w-24 h-12" src={userImage}></img>
           </section>
-          <section className="h-full w-1/2 flex items-center gap-10 justify-end pr-2">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="hello">Contact Us</a>
-            <a href="sample">Profile</a>
+          <section className="h-full w-1/2 flex items-center gap-10 justify-end pr-4">
+
+            <NavLink to={"/"}>Home</NavLink>
+            <NavLink to={"/about"}>About</NavLink>
+            <NavLink to={"/"}>Contact Us</NavLink>
+            <NavLink to={"/"}>Profile</NavLink>
+
           </section>
         </div>
       </section>
