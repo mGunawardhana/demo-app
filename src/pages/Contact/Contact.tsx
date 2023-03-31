@@ -6,9 +6,9 @@ export default class Contact extends Component {
   render() {
     return (
       <>
-        <Header />
-        <div className="p-6 mt-20">
-          <span className="flex flex-col space-y-3 text-center">
+        <Header/>
+        <div className="p-6 ">
+          <span className="flex flex-col text-center">
             <h3>Contact Us</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque

@@ -6,7 +6,7 @@ import Content from "./components/Content";
 
 function App() {
   return <div className="App">
-    <Header />
+    {/* <Header />metana header eka nodamme apita login ekn heading eka ayn karaganna one nisa */}
     <Content />
   </div>;
 }
