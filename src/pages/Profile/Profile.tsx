@@ -7,8 +7,8 @@ export default class Profile extends Component {
   render() {
     return (
       <>
-        <Header/>
-        <div className="mt-5">
+        <Header />
+        <div className="p-6 mt-20">
           <h1>Profile Page</h1>
         </div>
       </>

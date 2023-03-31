@@ -31,7 +31,7 @@ export default class Login extends Component {
                 />
               </div>
 
-              <Link to={"/"}>
+              <Link to={"/home"}>
                 <button className="w-full py-2 rounded-lg my-4 bg-green-400 hover:bg-green-600">
                   Sign In
                 </button>

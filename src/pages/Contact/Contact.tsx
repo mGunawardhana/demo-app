@@ -7,7 +7,7 @@ export default class Contact extends Component {
     return (
       <>
         <Header/>
-        <div className="p-6 ">
+        <div className="p-6 mt-20">
           <span className="flex flex-col text-center">
             <h3>Contact Us</h3>
             <p>
@@ -25,7 +25,7 @@ export default class Contact extends Component {
             </p>
           </span>
 
-          <div className="mt-3">
+          <div className="mt-3 w-3/4 flex items-center justify-center">
             <form className="w-full py-8 px-32 flex flex-col space-y-3">
               <TextField
                 label="Email"
@@ -46,7 +46,7 @@ export default class Contact extends Component {
                 maxRows={Infinity}
                 required
               />
-              <button className="w-full bg-accent-navy-200 text-white py-2 rounded">
+              <button className="w-full bg-green-600 text-white py-2 rounded">
                 <h6>Submit</h6>
               </button>
             </form>
