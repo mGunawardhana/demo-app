@@ -1,4 +1,4 @@
-import { type } from "os";
+// import { type } from "os";
 import { Component } from "react";
 import { Route, Routes } from "react-router-dom";
 import About from "../../pages/About";
@@ -6,7 +6,7 @@ import Contact from "../../pages/Contact";
 import Home from "../../pages/Home";
 import Login from "../../pages/Login";
 import Profile from "../../pages/Profile";
-import Counter from "../Counter";
+// import Counter from "../Counter";
 
 export default class Content extends Component {
   render() {

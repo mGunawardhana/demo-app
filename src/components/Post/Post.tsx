@@ -2,8 +2,9 @@ import { Component } from "react";
 import Tag from "../Tag";
 
 type PostProps = {
+  // id: string;
   title: string;
-  description: React.ReactNode;
+  description: string;
   hoursCount?: number;
   lecturerName?: string;
   tags: string[];

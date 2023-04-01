@@ -11,10 +11,10 @@ export default class Header extends Component {
     const normalLink = "cursor-pointer";
 
     return (
-      <div className=" w-full fixed h-16 bg-white top-0 shadow-2xl">
+      <div className=" w-full fixed h-16 bg-white top-0 shadow-xl">
         <div className="h-full flex">
           <div className="h-full w-1/2 flex items-center">
-            <img className="pl-6 w-24 h-12" src={myLogo}></img>
+            <img className="pl-6 w-24 h-12" src={myLogo} alt=""></img>
           </div>
           <div className="h-full w-1/2 flex items-center gap-12 justify-end pr-4">
             <NavLink
@@ -42,13 +42,6 @@ export default class Header extends Component {
             <NavLink to={"/"}>
               <img src={exitIcon} alt="exitIcon" className="w-6 h-6" />
             </NavLink>
-
-            {/* <NavLink
-              to={"/login"}
-              className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            >
-              Login
-            </NavLink> */}
           </div>
         </div>
       </div>

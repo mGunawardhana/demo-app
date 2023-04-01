@@ -1,45 +1,61 @@
-import React, { Component } from 'react'
+import { Component } from "react";
 
-type CounterProps = {initValue: number;};
+type CounterProps = {};
 
-type CounterState = { count: number; };
+type CounterState = { count: number };
 
-
-export default class Counter extends Component<CounterProps,CounterState> {
-    constructor(props:CounterProps) {
-        super(props);
-        this.state = {
-            count: this.props.initValue,
-        };
-    }
-
-    decreaseValue = () => {
-        if (this.state.count <= 10) {
-            this.setState({ count: this.state.count - 1 })
-        };
+export default class Counter extends Component<CounterProps, CounterState> {
+  constructor(props: CounterProps) {
+    super(props);
+    this.state = {
+      count: 0,
     };
+  }
 
-    increaseValue = () => {
-        this.setState({count:this.state.count+1});
-    };
+  componentDidMount() {
+    console.log("Component Mounted...");
+  }
+
+  componentDidUpdate() {
+    console.log("Component Updated...");
+  }
+
+  decreaseValue = () => {
+    this.setState((prevState) => ({
+      ...prevState,
+      count: prevState.count - 1,
+    }));
+  };
+
+  increaseValue = () => {
+    this.setState((prevState) => ({
+      ...prevState,
+      count: prevState.count + 1,
+    }));
+  };
 
   render() {
     return (
-     <div className='h-80 border
-       bg-slate-800 text-white px-32 flex justify-center items-center
-        flex-col gap-6 rounded-lg shadow-lg'>
-            <h1>{this.state.count}</h1>
-            <div className='flex gap-6 '>
-                <button
-                    className='text-4xl border-2 w-16 h-10 rounded-lg'
-                    onClick={this.decreaseValue }
-                >-</button>
-                <button className='text-4xl border-2 w-16 h-10 rounded-lg'
-                    onClick={ this.increaseValue}
-                >+</button>
-            </div>
+      <div className="p-10">
+        <h1>Count: {this.state.count}</h1>
+
+        <div className="flex space-x-3 mt-5">
+          <button
+            disabled={this.state.count === 10 ? true : false}
+            className="border border-green-800 px-4 py-2 text-green-800 rounded-xl hover:bg-green-800 hover:text-white"
+            onClick={this.increaseValue}
+          >
+            Increase
+          </button>
+          <button
+            disabled={this.state.count === 0 ? true : false}
+            className="border border-red-800 px-4 py-2 rounded-xl text-red-800 hover:bg-red-800 hover:text-white"
+            onClick={this.decreaseValue}
+          >
+            Decrease
+          </button>
         </div>
-    )
-      //01:26:09
+      </div>
+    );
   }
 }
